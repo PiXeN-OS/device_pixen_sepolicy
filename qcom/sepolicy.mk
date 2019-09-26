@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all qcom products
-# that inherit from Syberia
+# that inherit from pixen
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,13 +10,13 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/syberia/sepolicy/qcom/private
+    device/pixen/sepolicy/qcom/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/syberia/sepolicy/qcom/dynamic
+    device/pixen/sepolicy/qcom/dynamic
 else
 BOARD_SEPOLICY_DIRS += \
-    device/syberia/sepolicy/qcom/dynamic \
-    device/syberia/sepolicy/qcom/vendor
+    device/pixen/sepolicy/qcom/dynamic \
+    device/pixen/sepolicy/qcom/vendor
 endif

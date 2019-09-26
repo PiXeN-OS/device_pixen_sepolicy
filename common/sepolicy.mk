@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from Syberia
+# inherit from pixen
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,16 +10,16 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/syberia/sepolicy/common/public
+    device/pixen/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/syberia/sepolicy/common/private
+    device/pixen/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/syberia/sepolicy/common/dynamic
+    device/pixen/sepolicy/common/dynamic
 else
 BOARD_SEPOLICY_DIRS += \
-    device/syberia/sepolicy/common/dynamic \
-    device/syberia/sepolicy/common/vendor
+    device/pixen/sepolicy/common/dynamic \
+    device/pixen/sepolicy/common/vendor
 endif
